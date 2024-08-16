@@ -1,18 +1,18 @@
-# Commit Pattern / Padrões de confirmação 📜
+# Commit Pattern ou Padrões de confirmação 📜
 
 Conhecidos como "Commits semânticos", a especificação do **[Conventional Commits](https://www.conventionalcommits.org/pt-br)** é uma convenção simples para utilizar nas mensagens de commit. Ela define um conjunto de regras para criar um histórico de commit explícito, o que facilita a criação de ferramentas automatizadas baseadas na especificação.
 
-Esses commits auxiliarão você e sua equipe a entenderem de forma facilitada quais alterações foram realizadas no trecho de código que foi commitado.
+Esses *commits* auxiliarão você e sua equipe a entenderem de forma facilitada quais alterações foram realizadas no trecho de código que foi *commitado*.
 
-Essa identificação ocorre por meio de uma palavra e emoji que identifica se aquele commit realizado se trata de uma alteração de código, atualização de pacotes, documentação, alteração de visual, teste...
+Essa identificação ocorre por meio de uma palavra e emoji que identifica se aquele *commit* realizado se trata de uma alteração de código, atualização de pacotes, documentação, alteração de visual, teste, entre outras opções.
 
-## Tipo e descrição 
+## Tipo e descrição 💬 
 
-O commit semântico possui os elementos estruturais abaixo (tipos), que informam a intenção do seu commit ao utilizador(a) de seu código.
+O *commit* semântico possui os elementos estruturais abaixo (tipos), que informam a intenção do seu commit no contexto do seu código.
 
-- `feat`- trecho de código está incluindo um **novo recurso** (se relaciona com o MINOR do versionamento semântico).
+- `feat` - código está incluindo um **novo recurso**.
 
-- `fix` - trecho de código commitado está **solucionando um problema** (bug fix), (se relaciona com o PATCH do versionamento semântico).
+- `fix` - código está **solucionando um problema** (bug fix).
 
 - `docs` - **mudanças na documentação**, como por exemplo no Readme do seu repositório. (Não inclui alterações em código).
 
@@ -20,45 +20,49 @@ O commit semântico possui os elementos estruturais abaixo (tipos), que informam
 
 - `build` - modificações em **arquivos de build e dependências**.
 
-- `perf` - identificar quaisquer alterações de código que estejam relacionadas a **performance**.
+- `perf` - identificar quaisquer alterações de código que estejam relacionadas a **performance** [*para os que tem que tirar leite de pedra*].
 
-- `style` - alterações referentes a **formatações de código**, semicolons, trailing spaces, lint... (Não inclui alterações em código).
+- `style` - alterações referentes a **formatações de código**, semicolons, trailing spaces, lint... (Não inclui alterações em código) [*portanto só serve para os que tem TOC*].
 
-- `refactor` - mudanças devido a **refatorações que não alterem sua funcionalidade**, como por exemplo, uma alteração no formato como é processada determinada parte da tela, mas que manteve a mesma funcionalidade, ou melhorias de performance devido a um code review.
+- `refactor` - mudanças devido a **refatorações que não alterem sua funcionalidade**, como por exemplo, uma alteração no formato como é processada determinada parte da tela, mas que manteve a mesma funcionalidade [*grande fonte de problemas, já que a refatoração quase sempre arrasta algo que não deveria ter sido alterado*] ou melhorias de performance devido a um code review (tem outro tipo para isso, mas nesse caso veio como uma tarefa secundária).
 
 - `chore` - indicam **atualizações de tarefas** de build, configurações de administrador, pacotes... como por exemplo adicionar um pacote no gitignore. (Não inclui alterações em código)
 
 - `ci` - mudanças relacionadas a **integração contínua** (_continuous integration_).
 
-- `raw` - arquivos de configurações, dados, features, parametros.
+- `raw` - arquivos de configurações, dados, features, parâmetros.
 
-- `cleanup` - utilizados para remover código comentado, trechos desnecessários ou qualquer outra forma de limpeza do código-fonte, visando aprimorar sua legibilidade e manutenibilidade.
+- `cleanup` - utilizados para remover código comentado, trechos desnecessários ou qualquer outra forma de limpeza do código-fonte, visando aprimorar sua legibilidade e manutenção futura [*há controvérsias*].
 
 - `remove` - exclusão de arquivos, diretórios ou funcionalidades obsoletas ou não utilizadas, reduzindo o tamanho e a complexidade do projeto e mantendo-o mais organizado.
 
-## Recomendações 🎉
+## Recomendações ☑️
 
-- Adicione um tipo consistente com o título do conteúdo.
-- A primeira linha deve ter no máximo 4 palavras.
-- Para descrever com detalhes, usar a descrição do commit.
-- Usar um emoji no início da mensagem de commit representando sobre o commit.
-- Os links precisam ser adicionados em sua forma mais autêntica, ou seja: sem encurtadores de link e links afiliados.
+- Adicione um tipo consistente com o título do conteúdo;
+- Seja sucinto, preferencialmente a primeira linha deve ter 4 palavras;
+- Para maiores detalhes, utilize a descrição do commit;
+- Chame a atenção usando um emoji no início da mensagem de commit representando a ação do mesmo;
+- Ao adicionar links, faça na sua forma mais autêntica, ou seja, sem encurtadores de link e links afiliados.
 
 ## Complementos de commits 💻
 
-- **Rodapé:** informação sobre o revisor e número do card no Trello ou Jira. Exemplo: *Revisado por: Tom King Refs #1330*
-- **Corpo:** descrições mais precisas do que está contido no commit, apresentando impactos e os motivos pelos quais foram empregadas as alterações no código, como também instruções essenciais para intervenções futuras. Exemplo: *veja o ticket para detalhes sobre os erros de digitação corrigidos.*
-- **Descrições:** uma descrição sucinta da mudança. Exemplo: *corrige pequenos erros de digitação no código*
+- **Título:** uma descrição sucinta da mudança (ou o título da tarefa que veio da ferramenta de gestão). Exemplo: *erros de digitação no código*
+- **Corpo:** descrições mais precisas do que está contido no *commit*, apresentando impactos e os motivos pelos quais foram empregadas as alterações no código, como também instruções essenciais para intervenções futuras. Exemplo: *veja o ticket para detalhes sobre os erros de digitação corrigidos.*
+- **Rodapé:** [opcional] informação sobre o revisor e número do card no Trello ou Jira. Exemplo: *Revisado por: Tom King Refs #1330*
 
+<br>
 
-> 🐛 fix: corrige pequenos erros de digitação no código
-> 
-> veja o ticket para detalhes sobre os erros de digitação corrigidos.
->
-> Revisado por: Tom King
->
-> Refs #1330
+> 🐛 fix: erros de digitação no código <br>
+> veja o ticket para detalhes sobre os erros de digitação corrigidos.<br>
+> Revisado por: Tom King<br>
+> Refs #1330<br>
 
+## Por que utilizar Commits semânticos? 🤷‍♀️🤷‍♂️
+
+- Criação automatizada de CHANGELOGs.
+- Comunicar a natureza das mudanças para colegas de equipe, o público e outras partes interessadas.
+- Disparar processos de build e deploy (aqui depende de configurações adicionais).
+- Facilitar a contribuição de outras pessoas em seus projetos, permitindo que eles explorem um histórico de *commits* melhor estruturado.
 
 ## Padrões de emojis 💈
 
@@ -254,7 +258,7 @@ O commit semântico possui os elementos estruturais abaixo (tipos), que informam
   </tbody>
 </table>
 
-## 💻 Exemplos
+## Exemplos 🎬
 
 <table>
   <thead>
