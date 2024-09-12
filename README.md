@@ -10,52 +10,105 @@ Essa identificação ocorre por meio de uma palavra e emoji que identifica se aq
 
 O *commit* semântico possui os elementos estruturais abaixo (tipos), que informam a intenção do seu commit no contexto do seu código.
 
-- `feat` - código está incluindo um **novo recurso**.
-
-- `fix` - código está **solucionando um problema** (bug fix).
-
-- `docs` - **mudanças na documentação**, como por exemplo no Readme do seu repositório. (Não inclui alterações em código).
-
-- `test` - **alterações em testes**, seja criando, alterando ou excluindo testes unitários. (Não inclui alterações em código)
-
-- `build` - modificações em **arquivos de build e dependências**.
-
-- `perf` - identificar quaisquer alterações de código que estejam relacionadas a **performance** [*para os que tem que tirar leite de pedra*].
-
-- `style` - alterações referentes a **formatações de código**, semicolons, trailing spaces, lint... (Não inclui alterações em código) [*portanto só serve para os que tem TOC*].
-
-- `refactor` - mudanças devido a **refatorações que não alterem sua funcionalidade**, como por exemplo, uma alteração no formato como é processada determinada parte da tela, mas que manteve a mesma funcionalidade [*grande fonte de problemas, já que a refatoração quase sempre arrasta algo que não deveria ter sido alterado*] ou melhorias de performance devido a um code review (tem outro tipo para isso, mas nesse caso veio como uma tarefa secundária).
-
-- `chore` - indicam **atualizações de tarefas** de build, configurações de administrador, pacotes... como por exemplo adicionar um pacote no gitignore. (Não inclui alterações em código)
-
-- `ci` - mudanças relacionadas a **integração contínua** (_continuous integration_).
-
-- `raw` - arquivos de configurações, dados, features, parâmetros.
-
-- `cleanup` - utilizados para remover código comentado, trechos desnecessários ou qualquer outra forma de limpeza do código-fonte, visando aprimorar sua legibilidade e manutenção futura [*há controvérsias*].
-
-- `remove` - exclusão de arquivos, diretórios ou funcionalidades obsoletas ou não utilizadas, reduzindo o tamanho e a complexidade do projeto e mantendo-o mais organizado.
+<table>
+  <thead>
+    <tr>
+      <th>Tipo</th>
+      <th>Contexto</th>
+      <th><i>Meu pitaco</i></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>feat</code></td>
+      <td>Código está incluindo um <b>novo recurso</b>.</td>
+      <td><i>a maioria vai aqui</i></td>
+    </tr>
+    <tr>
+      <td><code>fix</code></td>
+      <td>Código está <b>solucionando um problema</b> (bug fix).</td>
+      <td><i>infelizmente sempre vai ter alguns aqui</i></td>
+    </tr>
+    <tr>
+      <td><code>docs</code></td>
+      <td><b>Mudanças na documentação</b>, como por exemplo no Readme do seu repositório. (Não inclui alterações em código).</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>test</code></td>
+      <td><b>Alterações em testes</b>, seja criando, alterando ou excluindo testes unitários. (Não inclui alterações em código)</td>
+      <td><i>Mas teste unitário não é código?</i></td>
+    </tr>
+    <tr>
+      <td><code>build</code></td>
+      <td>Modificações em <b>arquivos de build e dependências</b>.</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>perf</code></td>
+      <td>Identificar quaisquer alterações de código que estejam relacionadas a <b>performance</b>.</td>
+      <td><i>para os que tem que tirar leite de pedra</i></td>
+    </tr>
+    <tr>
+      <td><code>style</code></td>
+      <td>Alterações referentes a <b>formatações de código</b>, semicolons, trailing spaces, lint... (Não inclui alterações em código).</td>
+      <td><i>portanto só serve para os que tem TOC</i></td>
+    </tr>
+    <tr>
+      <td><code>refactor</code></td>
+      <td>Mudanças devido a <b>refatorações que não alterem sua funcionalidade</b>, como por exemplo, uma alteração no formato como é processada determinada parte da tela, mas que manteve a mesma funcionalidade ou melhorias de performance devido a um code review (tem outro tipo para isso, mas nesse caso veio como uma tarefa secundária).</td>
+      <td><i>grande fonte de problemas, já que a refatoração quase sempre arrasta algo que não deveria ter sido alterado</i></td>
+    </tr>
+    <tr>
+      <td><code>chore</code></td>
+      <td>Indicam <b>atualizações de tarefas</b> de build, configurações de administrador e pacotes; como por exemplo adicionar um pacote no gitignore. (Não inclui alterações em código)</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>ci</code></td>
+      <td>Mudanças relacionadas a <b>integração contínua</b> <i>(continuous integration)</i>.</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>raw</code></td>
+      <td>Arquivos de configurações, dados, parâmetros.</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>cleanup</code></td>
+      <td>Utilizados para remover código comentado, trechos desnecessários ou qualquer outra forma de limpeza do código-fonte, visando aprimorar sua legibilidade e manutenção futura.</td>
+      <td><i>há controvérsias</i></td>
+    </tr>
+    <tr>
+      <td><code>remove</code></td>
+      <td>Exclusão de arquivos, diretórios ou funcionalidades obsoletas ou não utilizadas, reduzindo o tamanho e a complexidade do projeto e mantendo-o mais organizado.</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
 
 ## Recomendações ☑️
 
 - Adicione um tipo consistente com o título do conteúdo;
-- Seja sucinto, preferencialmente a primeira linha deve ter 4 palavras;
+- Seja sucinto, preferencialmente a primeira linha deve ter 4 palavras [*eu nunca consegui cumprir essa regra*];
 - Para maiores detalhes, utilize a descrição do commit;
 - Chame a atenção usando um emoji no início da mensagem de commit representando a ação do mesmo;
 - Ao adicionar links, faça na sua forma mais autêntica, ou seja, sem encurtadores de link e links afiliados.
 
 ## Complementos de commits 💻
 
-- **Título:** uma descrição sucinta da mudança (ou o título da tarefa que veio da ferramenta de gestão). Exemplo: *erros de digitação no código*
-- **Corpo:** descrições mais precisas do que está contido no *commit*, apresentando impactos e os motivos pelos quais foram empregadas as alterações no código, como também instruções essenciais para intervenções futuras. Exemplo: *veja o ticket para detalhes sobre os erros de digitação corrigidos.*
-- **Rodapé:** [opcional] informação sobre o revisor e número do card no Trello ou Jira. Exemplo: *Revisado por: Tom King Refs #1330*
+- **Título:** uma descrição sucinta da mudança (ou o título da tarefa que veio da ferramenta de gestão). Exemplo: *Isolando configuração do mapper*
+
+- **Corpo:** descrições mais precisas do que está contido no *commit*, apresentando impactos e os motivos pelos quais foram empregadas as alterações no código, como também instruções essenciais para intervenções futuras. Exemplo: *Configuração do mapper foi isolada em método estático para que fosse reutilizado em testes unitários.*
+
+- **Rodapé:** [opcional] informação sobre o revisor e número do card no Trello ou Jira. Exemplo: *Revisado por: Caio M Refs #9313*
 
 <br>
 
-> 🐛 fix: erros de digitação no código <br>
-> veja o ticket para detalhes sobre os erros de digitação corrigidos.<br>
-> Revisado por: Tom King<br>
-> Refs #1330<br>
+> ♻️ REFACTOR: Isolando configuração do mapper<br>
+> Configuração do mapper foi isolada em método estático para que fosse reutilizado em testes unitários.<br>
+> Revisado por: Caio M<br>
+> Refs #9313<br>
 
 ## Por que utilizar Commits semânticos? 🤷‍♀️🤷‍♂️
 
@@ -276,39 +329,39 @@ O *commit* semântico possui os elementos estruturais abaixo (tipos), que inform
     </tr>
     <tr>
       <td>
-        <code>git commit -m ":books: docs: Atualização do README"</code>
+        <code>git commit -m ":books: docs: Atualização de README"</code>
       </td>
-      <td>📚 docs: Atualização do README</td>
+      <td>📚 docs: Atualização de README</td>
     </tr>
     <tr>
       <td>
-        <code>git commit -m ":bug: fix: Loop infinito na linha 50"</code>
+        <code>git commit -m ":bug: fix: Não aplicar permissão default"</code>
       </td>
-      <td>🐛 fix: Loop infinito na linha 50</td>
+      <td>🐛 fix: Não aplicar permissão default</td>
     </tr>
     <tr>
       <td>
-        <code>git commit -m ":sparkles: feat: Página de login"</code>
+        <code>git commit -m ":sparkles: feat: POST/users"</code>
       </td>
-      <td>✨ feat: Página de login</td>
+      <td>✨ feat: POST/users</td>
     </tr>
     <tr>
       <td>
-        <code>git commit -m ":bricks: ci: Modificação no Dockerfile"</code>
+        <code>git commit -m ":bricks: ci: Variáveis de ambiente no Dockerfile"</code>
       </td>
-      <td>🧱 ci: Modificação no Dockerfile</td>
+      <td>🧱 ci: Variáveis de ambiente no Dockerfile</td>
     </tr>
     <tr>
       <td>
-        <code>git commit -m ":recycle: refactor: Passando para arrow functions"</code>
+        <code>git commit -m ":recycle: refactor: Ajuste da role para permissão vazia"</code>
       </td>
-      <td>♻️ refactor: Passando para arrow functions</td>
+      <td>♻️ refactor: Ajuste da role para permissão vazia</td>
     </tr>
     <tr>
       <td>
-        <code>git commit -m ":zap: perf: Melhoria no tempo de resposta"</code>
+        <code>git commit -m ":zap: perf: Otimização da geração do mapa de jornada"</code>
       </td>
-      <td>⚡ perf: Melhoria no tempo de resposta</td>
+      <td>⚡ perf: Otimização da geração do mapa de jornada</td>
     </tr>
     <tr>
       <td>
@@ -324,33 +377,33 @@ O *commit* semântico possui os elementos estruturais abaixo (tipos), que inform
     </tr>
     <tr>
       <td>
-        <code>git commit -m ":test_tube: test: Criando novo teste"</code>
+        <code>git commit -m ":test_tube: test: Teste para validação de área"</code>
       </td>
-      <td>🧪 test: Criando novo teste</td>
+      <td>🧪 test: Teste para validação de área</td>
     </tr>
     <tr>
       <td>
-        <code>git commit -m ":bulb: docs: Comentários sobre a função LoremIpsum( )"</code>
+        <code>git commit -m ":bulb: docs: Comentários no swagger"</code>
       </td>
-      <td>💡 docs: Comentários sobre a função LoremIpsum( )</td>
+      <td>💡 docs: Comentários no swagger</td>
     </tr>
     <tr>
       <td>
-        <code>git commit -m ":card_file_box: raw: RAW Data do ano aaaa"</code>
+        <code>git commit -m ":card_file_box: raw: Token do ambiente de homologação"</code>
       </td>
-      <td>🗃️ raw: RAW Data do ano aaaa</td>
+      <td>🗃️ raw: Token do ambiente de homologação</td>
     </tr>
     <tr>
       <td>
-        <code>git commit -m ":broom: cleanup: Eliminando blocos de código comentados e variáveis não utilizadas"</code>
+        <code>git commit -m ":broom: cleanup: Eliminando variáveis não utilizadas"</code>
       </td>
-      <td>🧹 cleanup: Eliminando blocos de código comentados e variáveis não utilizadas</td>
+      <td>🧹 cleanup: Eliminando variáveis não utilizadas</td>
     </tr>
     <tr>
       <td>
-        <code>git commit -m ":wastebasket: remove: Removendo arquivos não utilizados do projeto"</code>
+        <code>git commit -m ":wastebasket: remove: Removendo arquivos desnecessários do projeto"</code>
       </td>
-      <td>🗑️ remove: Removendo arquivos não utilizados do projeto</td>
+      <td>🗑️ remove: Removendo arquivos desnecessários do projeto</td>
     </tr>
   </tbody>
 </table>
