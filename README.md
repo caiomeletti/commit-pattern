@@ -1,5 +1,7 @@
 # Commit Pattern ou Padrões de confirmação 📜
 
+![GitHub visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2Fcaiomeletti%2Fsolid-principles&countColor=%23263759&style=plastic)
+
 Conhecidos como "Commits semânticos", a especificação do **[Conventional Commits](https://www.conventionalcommits.org/pt-br)** é uma convenção simples para utilizar nas mensagens de commit. Ela define um conjunto de regras para criar um histórico de commit explícito, o que facilita a criação de ferramentas automatizadas baseadas na especificação.
 
 Esses *commits* auxiliarão você e sua equipe a entenderem de forma facilitada quais alterações foram realizadas no trecho de código que foi *commitado*.
