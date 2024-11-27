@@ -405,5 +405,41 @@ O *commit* semântico possui os elementos estruturais abaixo (tipos), que inform
       </td>
       <td>🗑️ remove: Removendo arquivos desnecessários do projeto</td>
     </tr>
+    <tr>
+      <td>
+        <code>git commit -m ":package: build: Package.json em JS"</code>
+      </td>
+      <td>📦 build: Package.json em JS</td>
+    </tr>
+    <tr>
+      <td>
+        <code>git commit -m ":heavy_plus_sign: build: Adicionando dependência para DLL"</code>
+      </td>
+      <td>➕ build: Adicionando dependência para DLL</td>
+    </tr>
+    <tr>
+      <td>
+        <code>git commit -m ":heavy_minus_sign: build: Atualizar caminho e nome do arquivo"</code>
+      </td>
+      <td>➖ build: Removendo dependência nuget</td>
+    </tr>
+    <tr>
+      <td>
+        <code>git commit -m ":ok_hand: style: Revisão de código"</code>
+      </td>
+      <td>👌 style: Revisão de código</td>
+    </tr>
+	    <tr>
+      <td>
+        <code>git commit -m ":lipstick: feat: Atualização tema de interface"</code>
+      </td>
+      <td>💄 feat: Atualização tema de interface</td>
+    </tr>
+      <td>
+        <code>git commit -m ":truck: chore: Atualizar caminho e nome do arquivo"</code>
+      </td>
+      <td>🚚 chore: Atualizar caminho e nome do arquivo</td>
+    </tr>
+
   </tbody>
 </table>
